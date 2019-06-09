@@ -17,7 +17,11 @@ stage ('checkoyt scm'){
         stage ('Testing'){
             steps{
                 sh 'sh app.sh'
+
             }
+            stage ('feature'){
+            steps{
+                sh 'echo features'}
         }
     }
 }
