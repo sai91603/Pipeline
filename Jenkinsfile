@@ -1,5 +1,5 @@
 pipeline{
-    Agent any;
+    Agent any
     stages {
         stage('setup'){
             steps{cleanWs();
