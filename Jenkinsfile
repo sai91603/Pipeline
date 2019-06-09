@@ -27,3 +27,5 @@ stage ('checkoyt scm'){
             steps{
                 sh 'echo features'}
         }
+    }
+}
