@@ -18,6 +18,10 @@ stage ('checkoyt scm'){
             steps{
                 sh 'sh app.sh'
             }
+            stage ('deploy'){
+            steps{
+                sh 'echo deploy'
+            }
         }
     }
 }
