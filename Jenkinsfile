@@ -1,26 +1,27 @@
+
 pipeline{
     agent any
-    stages {
-        stage ('setup'){
+    stages{
+        stage('setup'){
             steps{
-                cleanWs();
-            sh 'echo setting up my workspace'
+                cleanWs()
+                sh 'echo settingup my workspace'
+            }
+            stage('checkoutscm'){
+            steps{
+                checkout scm
             }
         }
-stage ('checkoyt scm'){
-    steps{
-        checkout scm
-    }
-}
-    stage ('compile Code'){
-        steps {
-            sh 'chmod +x app.sh'
+        stage('compile'){
+            steps{
+                sh 'chmod +x app.sh'
+            }
         }
-    }
-        stage ('Testing'){
+        stage('testing'){
             steps{
                 sh 'sh app.sh'
             }
         }
     }
+}
 }
