@@ -20,7 +20,7 @@ pipeline{
         }
         stage('testing'){
             steps{
-                sh 'sh app.sh'
+                sh  'app.sh'
             }
         }
     }
