@@ -1,12 +1,13 @@
 
 pipeline{
-    agent any
+    agent any;
     stages{
         stage('setup'){
             steps{
                 cleanWs()
                 sh 'echo settingup my workspace'
             }
+        }
             stage('checkoutscm'){
             steps{
                 checkout scm
@@ -23,5 +24,4 @@ pipeline{
             }
         }
     }
-}
 }
